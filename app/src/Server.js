@@ -559,7 +559,7 @@ function startServer() {
         const { host, authorization } = req.headers;
         const api = new ServerApi(host, authorization);
         if (!api.isAuthorized()) {
-            log.debug('MiroTalk get meetings - Unauthorized', {
+            log.debug('Meet Softollyo get meetings - Unauthorized', {
                 header: req.headers,
                 body: req.body,
             });
@@ -569,7 +569,7 @@ function startServer() {
         const meetings = api.getMeetings(roomList);
         res.json({ meetings: meetings });
         // log.debug the output if all done
-        log.debug('MiroTalk get meetings - Authorized', {
+        log.debug('Meet Softollyo get meetings - Authorized', {
             header: req.headers,
             body: req.body,
             meetings: meetings,
@@ -588,7 +588,7 @@ function startServer() {
         const { host, authorization } = req.headers;
         const api = new ServerApi(host, authorization);
         if (!api.isAuthorized()) {
-            log.debug('MiroTalk get meeting - Unauthorized', {
+            log.debug('Meet Softollyo get meeting - Unauthorized', {
                 header: req.headers,
                 body: req.body,
             });
@@ -598,7 +598,7 @@ function startServer() {
         const meetingURL = api.getMeetingURL();
         res.json({ meeting: meetingURL });
         // log.debug the output if all done
-        log.debug('MiroTalk get meeting - Authorized', {
+        log.debug('Meet Softollyo get meeting - Authorized', {
             header: req.headers,
             body: req.body,
             meeting: meetingURL,
@@ -617,7 +617,7 @@ function startServer() {
         const { host, authorization } = req.headers;
         const api = new ServerApi(host, authorization);
         if (!api.isAuthorized()) {
-            log.debug('MiroTalk get join - Unauthorized', {
+            log.debug('Meet Softollyo get join - Unauthorized', {
                 header: req.headers,
                 body: req.body,
             });
@@ -627,7 +627,7 @@ function startServer() {
         const joinURL = api.getJoinURL(req.body);
         res.json({ join: joinURL });
         // log.debug the output if all done
-        log.debug('MiroTalk get join - Authorized', {
+        log.debug('Meet Softollyo get join - Authorized', {
             header: req.headers,
             body: req.body,
             join: joinURL,
@@ -646,7 +646,7 @@ function startServer() {
         const { host, authorization } = req.headers;
         const api = new ServerApi(host, authorization);
         if (!api.isAuthorized()) {
-            log.debug('MiroTalk get token - Unauthorized', {
+            log.debug('Meet Softollyo get token - Unauthorized', {
                 header: req.headers,
                 body: req.body,
             });
@@ -656,7 +656,7 @@ function startServer() {
         const token = api.getToken(req.body);
         res.json({ token: token });
         // log.debug the output if all done
-        log.debug('MiroTalk get token - Authorized', {
+        log.debug('Meet Softollyo get token - Authorized', {
             header: req.headers,
             body: req.body,
             token: token,
